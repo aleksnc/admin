@@ -1,0 +1,60 @@
+.page-footer{
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__wrapper{
+    background-color:  #544d4d;
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+  }
+
+
+  &__social-link{
+    background-image:                                 url('@{img-path}vk.png');
+    background-repeat:                                no-repeat;
+    font-size:                                        0;
+    background-size:                                  cover;
+    padding:                                          20px 96px;
+    margin-left:                                      -256px;
+  }
+
+  &__contacts{
+    color:                                             #fff;
+    display:                                           block;
+    font-size:                                         @text-size;
+    font-family:                                       @font-family-h;
+    font-weight:                                       500;
+    text-align:                                        center;
+    float:                                             right;
+    width:                                             100%;
+    & span{
+      display:                                         block;
+    }
+    & a{
+      display:                                         inline-block;
+      font-weight:                                     normal;
+      font-size:                                       (@text-size-l)-4;
+      font-family:                                     @font-family;
+
+      @media (min-width: 768px) {
+        font-size:                                     @text-size-sm;
+        padding:                                       5px 20px;
+        padding-right:                                  0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding:                                         0px 20px;
+      font-size:                                       @text-size-sm;
+      text-align:                                      left;
+      width: auto;
+    }
+
+    @media (min-width: 1200px) {
+      text-align: right;
+    }
+
+  }
+}

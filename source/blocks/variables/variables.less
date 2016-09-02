@@ -1,0 +1,72 @@
+
+@text-size-xxl:                       36px;
+@text-size-xl:                        24px;
+@text-size-l:                         20px;
+@text-size:                           16px;
+@text-size-sm:                        14px;
+
+@color-primary:                       #2f3030;
+@color-primary-active:                #49dd7a;
+@color-primary-passive:               #bfbfbf;
+@color-second:                        #009aff;
+@color-attention:                     #e85715;
+
+
+@gray-dark:                           #2d2e2e;
+@gray:                                #838383;
+@gray-light:                          #9ba1ac;
+@gray-wight:                          #fafafa;
+
+@font-family:                        'arial', sans-serif;
+@font-family-h:                      'calibri', sans-serif;
+
+@screen-sm:                           768px;
+@screen-md:                           1200px;
+
+@img-path:                            'images/';
+
+
+.line-l1, .line-l2{
+  border-bottom:                      2px solid @color-second;
+  width:                              30px;
+  display:                            block;
+  margin:                             2px auto;
+}
+
+.title{
+  font-family:                        @font-family-h;
+  font-weight:                        700;
+  font-size:                          @text-size-xl;
+  margin:                             0;
+  display:                            block;
+  margin:                             0;
+  padding:                            0;
+  text-align:                         center;
+  text-transform:                    uppercase;
+
+  @media (min-width: 468px) {
+    font-size:                        @text-size-xl;
+  }
+}
+
+.description{
+@extend .title;
+  font-weight:                        500;
+  font-size:                          @text-size-l;
+  text-transform: none;
+}
+
+.color-attention{
+  color:                              @color-attention;
+  font-size:                          @text-size-l;
+
+  &:hover{
+    color:                            @color-primary-active;
+  }
+}
+
+.span--wrapper{
+  padding: 0 5px;
+}
+
+

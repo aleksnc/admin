@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  color: #2d2e2e;
+  font-family: 'arial', sans-serif;
+}
+a,
+button,
+a:hover,
+a:active {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+label span {
+  text-transform: uppercase;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label span {
+  display: block;
+  width: 100%;
+  background-position-y: 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  margin: 24px 0;
+}
+input[type="radio"]:checked + label span {
+  opacity: 1;
+}
+input[type="radio"]:checked ~ ul {
+  display: inline-block;
+  max-width: 780px;
+  width: 100%;
+  top: 140px;
+  left: -2px;
+  position: absolute;
+}
+.line-l1,
+.line-l2 {
+  border-bottom: 2px solid #009aff;
+  width: 30px;
+  display: block;
+  margin: 2px auto;
+}
+.title {
+  font-family: 'calibri', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 468px) {
+  .title {
+    font-size: 24px;
+  }
+}
+.description {
+  @extend .title;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: none;
+}
+.color-attention {
+  color: #e85715;
+  font-size: 20px;
+}
+.color-attention:hover {
+  color: #49dd7a;
+}
+.span--wrapper {
+  padding: 0 5px;
+}
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.content__img {
+  width: 100%;
+  height: 100%;
+  max-width: 594px;
+  max-height: 699px;
+}
