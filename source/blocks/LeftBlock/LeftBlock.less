@@ -1,0 +1,114 @@
+.LeftBlock{
+
+  &__wrapper{
+    width: 260px;
+    min-height: 500px;
+    border-right: 1px solid @gray-light;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    font-size: 11px;
+    color: @gray;
+    padding: 15px;
+  }
+
+  &__search{
+
+  }
+
+  &__section{
+    &:last-child{
+      border-bottom: 1px solid @gray-light;
+    }
+
+    li{
+      padding: 10px;
+      padding-left: 20px;
+      cursor: pointer;
+      border-top: 1px solid @gray-light;
+
+      &:before{
+        content: '\f0ac';
+        font-family: FontAwesome;
+        padding-right: 10px;
+        font-size: 17px;
+        color: @color-second;
+      }
+
+      &.FAblog{
+        &:before {
+          content: '\f115';
+        }
+      }
+
+      &.FAcamera{
+        &:before {
+          content: '\f030';
+        }
+      }
+      &.FAcomments{
+        &:before {
+          content: '\f0e6';
+        }
+      }
+      &.FAnews{
+        &:before {
+          content: '\f1ea';
+        }
+      }
+
+      &:hover{
+        background-color: @gray-wight;
+      }
+
+      &:active{
+        background-color: @gray-wight;
+        font-size: @text-size-sm;
+        color: #fff;
+        font-weight: 500;
+        background-color: @color-second;
+      }
+    }
+
+    &--li {
+      font-size: (@text-size-sm)-1;
+      display: none;
+
+    }
+    &--btn{
+      font-size: @text-size-sm;
+      display: block;
+
+      &.select{
+        background-color: @gray-wight;
+        font-size: @text-size-sm;
+        color: #fff;
+        font-weight: 500;
+        background-color: @color-second;
+
+        &:before{
+          color: #fff;
+        }
+
+        &:hover{
+          background-color: @color-second;
+        }
+      }
+    }
+
+    &--select{
+
+      li {
+        display: block;
+
+        &:active{
+          color: #777;
+          font-size: (@text-size-sm)-1;
+          background-color: @gray-wight;
+        }
+      }
+    }
+
+  }
+}

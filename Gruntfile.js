@@ -47,16 +47,6 @@ module.exports = function(grunt){
         }
       }
     },
-    cmq: {
-      options: {
-        log: false
-      },
-      your_target: {
-        files: {
-          'tmp': ['dest/css/*.css']
-        }
-      }
-    },
     autoprefixer:{
       options: {
         browsers: ['> 1%', 'last 5 versions', 'Firefox ESR', 'Opera 12.1'],
@@ -94,10 +84,10 @@ module.exports = function(grunt){
       },
       css: {
         files: ['source/css/**/*.css'],
-        tasks: ['copy:css','cmq'],
+        tasks: ['copy:css'],
       },
       pug: {
-        files: ['source/*.pug'],
+        files: ['source/**/*.pug'],
         tasks: ['pug'],
       },
       less: {
@@ -128,7 +118,6 @@ module.exports = function(grunt){
     }
   });
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-image');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -141,7 +130,6 @@ module.exports = function(grunt){
     'pug',
     'less',
     'autoprefixer',
-    'cmq',
     'browserSync',
     'watch'
   ]);
