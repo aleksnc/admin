@@ -1,16 +1,21 @@
-.LeftBlock{
+.leftBlock{
+
 
   &__wrapper{
-    width: 260px;
+    min-width: 260px;
+    width: 100%;
+    flex-shrink: 4;
     min-height: 500px;
-    border-right: 1px solid @gray-light;
+    border-right: 1px solid @gray-wight-b;
+    height: 100%;
   }
 
   &__title{
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: @text-size-sm;
     color: @gray;
     padding: 15px;
+    border-bottom: 1px solid @gray-light;
   }
 
   &__search{
@@ -18,6 +23,8 @@
   }
 
   &__section{
+    font-size: @text-size;
+    color: @color-second;
     &:last-child{
       border-bottom: 1px solid @gray-light;
     }
@@ -26,7 +33,6 @@
       padding: 10px;
       padding-left: 20px;
       cursor: pointer;
-      border-top: 1px solid @gray-light;
 
       &:before{
         content: '\f0ac';
@@ -36,53 +42,56 @@
         color: @color-second;
       }
 
-      &.FAblog{
+      &.ico-blog{
         &:before {
           content: '\f115';
         }
       }
 
-      &.FAcamera{
+      &.ico-camera{
         &:before {
           content: '\f030';
         }
       }
-      &.FAcomments{
+      &.ico-comments{
         &:before {
           content: '\f0e6';
         }
       }
-      &.FAnews{
+      &.ico-news{
         &:before {
           content: '\f1ea';
         }
       }
 
       &:hover{
-        background-color: @gray-wight;
+        background-color: @gray-light;
       }
 
       &:active{
         background-color: @gray-wight;
-        font-size: @text-size-sm;
         color: #fff;
         font-weight: 500;
         background-color: @color-second;
+
+        &:before{
+          color: #fff;
+        }
       }
     }
 
     &--li {
-      font-size: (@text-size-sm)-1;
+      font-size: @text-size;
       display: none;
 
     }
     &--btn{
-      font-size: @text-size-sm;
+      font-size: @text-size;
       display: block;
 
       &.select{
         background-color: @gray-wight;
-        font-size: @text-size-sm;
+        font-size: @text-size;
         color: #fff;
         font-weight: 500;
         background-color: @color-second;
@@ -103,9 +112,20 @@
         display: block;
 
         &:active{
-          color: #777;
-          font-size: (@text-size-sm)-1;
+          color: @color-primary;
+          font-size: @text-size;
           background-color: @gray-wight;
+          &:before{
+            color: @color-primary;
+          }
+
+          &:first-child{
+            color: #fff;
+
+            &:before{
+              color: #fff;
+            }
+          }
         }
       }
     }

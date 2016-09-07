@@ -1,14 +1,14 @@
-//Left Block Sections
+//left Block Sections
 
 $(document).ready(function(){
-  $('.LeftBlock__section li:first-child').addClass('LeftBlock__section--btn');
-  $('.LeftBlock__section li:not(:first-child)').addClass('LeftBlock__section--li');
+  $('.leftBlock__section li:first-child').addClass('leftBlock__section--btn');
+  $('.leftBlock__section li:not(:first-child)').addClass('leftBlock__section--li');
 
-  $('.LeftBlock__section--btn').on( 'click', function(){
-    $('.LeftBlock__section--btn').toggleClass('select', false);
-    $('.LeftBlock__section').toggleClass('LeftBlock__section--select', false);
+  $('.leftBlock__section--btn').on( 'click', function(){
+    $('.leftBlock__section--btn').toggleClass('select', false);
+    $('.leftBlock__section').toggleClass('leftBlock__section--select', false);
     var $this =$(this);
     $this.toggleClass('select');
-    $this.parent().toggleClass('LeftBlock__section--select');
+    $this.parent().toggleClass('leftBlock__section--select');
   });
 });
