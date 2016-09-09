@@ -4,7 +4,7 @@
   &__wrapper{
     min-width: 260px;
     width: 100%;
-    flex-shrink: 4;
+    flex-shrink: 5;
     min-height: 500px;
     border-right: 1px solid @gray-wight-b;
     height: 100%;
@@ -35,33 +35,9 @@
       cursor: pointer;
 
       &:before{
-        content: '\f0ac';
-        font-family: FontAwesome;
         padding-right: 10px;
         font-size: 17px;
         color: @color-second;
-      }
-
-      &.ico-blog{
-        &:before {
-          content: '\f115';
-        }
-      }
-
-      &.ico-camera{
-        &:before {
-          content: '\f030';
-        }
-      }
-      &.ico-comments{
-        &:before {
-          content: '\f0e6';
-        }
-      }
-      &.ico-news{
-        &:before {
-          content: '\f1ea';
-        }
       }
 
       &:hover{

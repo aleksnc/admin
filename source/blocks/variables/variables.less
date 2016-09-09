@@ -28,23 +28,15 @@
 
 .title{
   font-family:                        @font-family-h;
-  font-weight:                        700;
-  font-size:                          @text-size-xl;
-  margin:                             0;
-  display:                            block;
-  margin:                             0;
-  padding:                            0;
-  text-align:                         center;
-  text-transform:                    uppercase;
-
-  @media (min-width: 468px) {
-    font-size:                        @text-size-xl;
-  }
+  font-size:                          @text-size-xxl;
+  margin:                             30px 0;
+  display:                            inline-block;
+  text-align:                         left;
 }
 
 .description{
-@extend .title;
-  font-weight:                        500;
+  &:extend(.title);
+  font-weight:                        300;
   font-size:                          @text-size-l;
   text-transform: none;
 }
@@ -66,6 +58,12 @@
 
 .span--wrapper{
   padding: 0 5px;
+}
+
+.slesh{
+  font-size: 16px;
+  color: #ccc;
+  padding: 5px;
 }
 
 

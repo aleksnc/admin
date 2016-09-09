@@ -1,0 +1,55 @@
+.explorer{
+  padding: 0 15px;
+  height: 100%;
+
+  &__title{
+    &:extend(.title);
+  }
+
+  &__block{
+    display: flex;
+    width: 100%;
+  }
+
+  &__path-wrapper{
+    min-width: 200px;
+    max-height: 500px;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    flex-shrink: 5;
+    border-radius: 5px;
+
+  }
+
+  &__path{
+
+  }
+
+  &__path-list{
+    margin-top: 3px;
+    padding: 2px 15px;
+    padding-left: 35px;
+
+    &:before{
+      margin-right: 5px;
+      color: @color-second;
+    }
+
+    &:hover{
+      background: @gray-wight-b;
+    }
+  }
+
+  &__path-main{
+    padding: 2px 15px;
+  }
+
+  &__edit{
+    width: 100%;
+    background: #fff;
+    margin-left: 15px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}

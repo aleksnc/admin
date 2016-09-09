@@ -56,24 +56,17 @@ input[type="radio"]:checked ~ ul {
   left: -2px;
   position: absolute;
 }
-.title {
+.title,
+.description,
+.explorer__title {
   font-family: 'calibri', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  display: block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media (min-width: 468px) {
-  .title {
-    font-size: 28px;
-  }
+  font-size: 40px;
+  margin: 30px 0;
+  display: inline-block;
+  text-align: left;
 }
 .description {
-  @extend .title;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   text-transform: none;
 }
@@ -92,12 +85,61 @@ input[type="radio"]:checked ~ ul {
 .span--wrapper {
   padding: 0 5px;
 }
+.slesh {
+  font-size: 16px;
+  color: #ccc;
+  padding: 5px;
+}
+.explorer {
+  padding: 0 15px;
+  height: 100%;
+}
+.explorer__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.explorer__path-wrapper {
+  min-width: 200px;
+  max-height: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 15px 0;
+  -webkit-flex-shrink: 5;
+  -ms-flex-negative: 5;
+  flex-shrink: 5;
+  border-radius: 5px;
+}
+.explorer__path-list {
+  margin-top: 3px;
+  padding: 2px 15px;
+  padding-left: 35px;
+}
+.explorer__path-list:before {
+  margin-right: 5px;
+  color: #30a5ff;
+}
+.explorer__path-list:hover {
+  background: #eee;
+}
+.explorer__path-main {
+  padding: 2px 15px;
+}
+.explorer__edit {
+  width: 100%;
+  background: #fff;
+  margin-left: 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
 .leftBlock__wrapper {
   min-width: 260px;
   width: 100%;
-  -webkit-flex-shrink: 4;
-  -ms-flex-negative: 4;
-  flex-shrink: 4;
+  -webkit-flex-shrink: 5;
+  -ms-flex-negative: 5;
+  flex-shrink: 5;
   min-height: 500px;
   border-right: 1px solid #eee;
   height: 100%;
@@ -122,23 +164,9 @@ input[type="radio"]:checked ~ ul {
   cursor: pointer;
 }
 .leftBlock__section li:before {
-  content: '\f0ac';
-  font-family: FontAwesome;
   padding-right: 10px;
   font-size: 17px;
   color: #30a5ff;
-}
-.leftBlock__section li.ico-blog:before {
-  content: '\f115';
-}
-.leftBlock__section li.ico-camera:before {
-  content: '\f030';
-}
-.leftBlock__section li.ico-comments:before {
-  content: '\f0e6';
-}
-.leftBlock__section li.ico-news:before {
-  content: '\f1ea';
 }
 .leftBlock__section li:hover {
   background-color: #e9ecf2;
@@ -190,11 +218,30 @@ input[type="radio"]:checked ~ ul {
 .leftBlock__section--select li:active:first-child:before {
   color: #fff;
 }
+.line-path {
+  width: 100%;
+  height: 40px;
+  padding: 13px 15px 8px;
+  background: #e9ecf2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.line-path__icon .home {
+  height: 15px;
+  width: 15px;
+  margin: -2px 0 0 0;
+  stroke-width: 4px;
+}
+.line-path__name {
+  font-size: 14px;
+}
+#stroked-home .line {
+  stroke: #30a5ff;
+  stroke-width: 4;
+}
 .page-header {
   height: 50px;
 }
 .page-header__wrapper {
-  @extend .wrapper;
   background: #000;
   margin-bottom: -50px;
 }
@@ -259,23 +306,8 @@ input[type="radio"]:checked ~ ul {
 }
 .rightBlock__wrapper {
   width: 100%;
-}
-.rightBlock__part {
-  width: 100%;
-  height: 40px;
-  padding: 13px 16px 8px;
-  background: #e9ecf2;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.rightBlock__part .home {
-  height: 15px;
-  width: 15px;
-  margin: -2px 0 0 0;
-  stroke-width: 4px;
-}
-#stroked-home .line {
-  stroke: #30a5ff;
-  stroke-width: 4;
+  height: 100%;
+  background: #f1f4f7;
 }
 .allContent__wrapper {
   padding: 50px 0 40px;
@@ -285,4 +317,32 @@ input[type="radio"]:checked ~ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.ico-earth:before {
+  content: '\f0ac';
+  font-family: FontAwesome;
+}
+.ico-blog-o:before {
+  content: '\f115';
+  font-family: FontAwesome;
+}
+.ico-blog:before {
+  content: '\f114';
+  font-family: FontAwesome;
+}
+.ico-camera:before {
+  content: '\f030';
+  font-family: FontAwesome;
+}
+.ico-comments:before {
+  content: '\f0e6';
+  font-family: FontAwesome;
+}
+.ico-news:before {
+  content: '\f1ea';
+  font-family: FontAwesome;
+}
+.ico-word:before {
+  content: '\f1c2 ';
+  font-family: FontAwesome;
 }
